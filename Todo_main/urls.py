@@ -15,11 +15,13 @@
  #   2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 
 from django.contrib import admin
-from django.urls import path
+from django.urls import path,include
 from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     #once we click to  http://127.0.0.1:8000/ the home page should be display
-    path('', views.home, name='home')
+    path('', views.home, name='home'),
+    # Path to show todo url for add
+    path('todo/',include('todo.urls')),
 ]
