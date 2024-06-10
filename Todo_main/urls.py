@@ -23,5 +23,6 @@ urlpatterns = [
     #once we click to  http://127.0.0.1:8000/ the home page should be display
     path('', views.home, name='home'),
     # Path to show todo url for add
+    
     path('todo/',include('todo.urls')),
 ]
